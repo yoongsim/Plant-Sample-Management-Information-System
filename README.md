@@ -5,9 +5,13 @@ Plant Sample Management Information System is a web application designed to mana
 ### Features 
 
 (CRUD Operations)
+
 Insert Data: Add new plant species, detailed information about each species, sample records, and distribution data.
+
 Update Data: Modify existing records with up-to-date information.
+
 Delete Data: Remove records that are no longer needed.
+
 Retrieve Data: Search and view detailed information about plant species, samples, and their distributions.
 
 
