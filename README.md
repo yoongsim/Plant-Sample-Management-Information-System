@@ -3,17 +3,14 @@ Plant Sample Management Information System is a web application designed to mana
 
 
 ## Features 
+(CRUD Operations)<br/>
 
-(CRUD Operations)
-
-**Insert Data**: Add new plant species, detailed information about each species, sample records, and distribution data.
-
-**Update Data**: Modify existing records with up-to-date information.
-
-**Delete Data**: Remove records that are no longer needed.
-
-**Retrieve Data**: Search and view detailed information about plant species, samples, and their distributions.
+**Insert Data**: Add new plant species, detailed information about each species, sample records, and distribution data.<br/>
+**Update Data**: Modify existing records with up-to-date information.<br/>
+**Delete Data**: Remove records that are no longer needed.<br/>
+**Retrieve Data**: Search and view detailed information about plant species, samples, and their distributions.<br/><br/><br/>
 
 
-**Database: MySQL**
+## Technologies used<br/>
+**Database: MySQL**<br/>
 **Languages: HTML, CSS, Python CGI**
