@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2_PSMIS</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="images/plant_logo.png">
+</head>
+
+<body>
+    <!-- !MENU! -->
+    <div id ="header_div">
+        <img src="images/plant_logo.png" alt="Logo" id="logo_image" style="height: 90px;">
+        <h1 id = "h1_header_div">Plant Sample Management Information System </h1>
+    </div>
+
+    <div id="header_nav">
+        <ul id="header_nav_ul">
+            <li id = "header_li" ><a href="main.html" >Home</a></li>
+            <li id = "header_li" ><a href="insert.html" >Insert Data</a></li>
+            <li id = "header_li"><a href="update.html" >Update Data</a></li>
+            <li id = "header_li"><a href="delete.html" >Delete Data</a></li>
+            <li id = "header_li"><a href="retrieve.html" >Retrieve Data</a></li>
+            <button id="feedback_button"></button>
+        </ul>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div id="content">
+    
+    <div style = 'text-align: center'>
+      <h3><b>Insert Data</b></h3>
+      <p>Please fill in the details in the form</p>
+    </div><br>
+
+    <form id= "insertForm" action="/test-cgi/siv3009/yoongsim/.assignment2/insert.cgi" method="post" style="background-color: rgba(225, 255, 247, 0.932);">
+        <fieldset>Entry Form: <br><br>
+            
+
+            <fieldset><legend>Species</legend>
+            <br>
+            <label for="spID">Species ID: </label><input type = "text" name="spID" placeholder="int(10)" required/> &nbsp;&nbsp;&nbsp;
+            <label for="spName">Name: </label><input type = "text" name="spName" placeholder="varchar(255)" required/> &nbsp;&nbsp;&nbsp;
+            <label for="spYear">Year: </label><input type = "text" name="spYear" placeholder="varchar(4)" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <label for="spAuthors">Authors: </label><input type = "text" name="spAuthors" placeholder="varchar(255)" required/>
+            <br>  
+           </fieldset><br><br>
+
+
+            <fieldset><legend>Species Details</legend>
+            <br>
+            <label for="descWhole">Whole: </label><input type="text" name="descWhole" placeholder="tinytext" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="descFruit">Fruit: </label><input type="text" name="descFruit" placeholder="tinytext" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="descFlower">Flower: </label><input type="text" name="descFlower" placeholder="tinytext" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <label for="descBark">Bark: </label><input type="text" name="descBark" placeholder="tinytext" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="descLeaf">Leaf: </label><input type="text" name="descLeaf" placeholder="tinytext" required/> 
+            <br>
+            </fieldset><br><br>
+
+
+            <fieldset><legend>Samples</legend>
+            <br>
+            <label for="sampleID">SampleID: </label><input type="text" name="sampleID" placeholder="int(10)" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="collectorName">Collector Name: </label><input type="text" name="collectorName" placeholder="varchar(255)" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="recordDate">Record Date: </label><input type="text" name="recordDate" placeholder="yyyy-mm-dd" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <label for="description">Description: </label><input type="text" name="description" placeholder="tinytext" required/> 
+            <br>
+            </fieldset><br><br>
+
+
+            <fieldset><legend>Distribution</legend>
+            <br>
+            <label for="distID">DistID: </label><input type="text" name="distID" placeholder="int(10)" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="geoSpatialCoverage">Spatial Coverage: </label><input type="text" name="geoSpatialCoverage" placeholder="varchar(255)" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="geoSpatialCoordinates">Spatial Coordinates: </label><input type="text" name="geoSpatialCoordinates" placeholder="varchar(255)" required/> 
+            <br>
+            </fieldset><br><br>
+
+            <input type="submit" value="Submit" id = "submit_button">
+            <input type="reset" value="Reset" id = "reset_button" onclick="resetQuery()">
+                    
+        </fieldset>    
+    </form>
+    <br><br>
+    </div>
+
+
+    <!-- !FOOTER! -->
+    <div id="footer">
+        <br><br>
+        <p> SIV3009 Assignment 2 | Created by: &nbsp;&nbsp; U2004667 CHONG YOONG SIM  &nbsp;&nbsp; & &nbsp;&nbsp; U2004605 LAI HUI HUI<br></p>                                     
+        <br><br>                               
+        
+    </div>
+</body>
+
+<!-- !JAVA SCRIPT! -->
+<script>
+    function resetQuery() {
+        document.getElementById("insertForm").reset();
+    }
+
+    var submit_button = document.getElementById("submit_button");
+    submit_button.addEventListener("click", function(e) {
+        var required = document.querySelectorAll("input[required]");
+
+        required.forEach(function(element){
+            if(element.value.trim()==""){
+                element.style.backgroundColor = "#de2c38";
+            } else {
+                element.style.backgroundColor = "white";
+            }
+            
+        });
+    });
+</script>
+</html>

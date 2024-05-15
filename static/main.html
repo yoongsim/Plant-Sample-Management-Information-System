@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2_PSMIS</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="images/plant_logo.png">
+</head>
+
+<body>
+    <!-- !MENU! -->
+    <div id ="header_div">
+        <img src="images/plant_logo.png" alt="Logo" id="logo_image" style="height: 90px;">
+        <h1 id = "h1_header_div">Plant Sample Management Information System </h1>
+    </div>
+
+    <div id="header_nav">
+        <ul id="header_nav_ul">
+            <li id = "header_li" ><a href="main.html" >Home</a></li>
+            <li id = "header_li" ><a href="insert.html" >Insert Data</a></li>
+            <li id = "header_li"><a href="update.html" >Update Data</a></li>
+            <li id = "header_li"><a href="delete.html" >Delete Data</a></li>
+            <li id = "header_li"><a href="retrieve.html" >Retrieve Data</a></li>
+            <button id="feedback_button"></button>
+        </ul>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px;">
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    
+          <div class="w3-quarter">
+            <a href="insert.html" style="text-decoration: none;" onMouseOver="this.style.color='#007c82'" onMouseLeave="this.style.color = ''">
+            <img src="images/insert.png" style="width:150px;height:150px;" alt="insert" style="width:100%"> <br><br>
+            <h3 >Insert Data</h3>
+            <p>Include additional information into the database</p></a>
+          </div>
+    
+          <div class="w3-quarter">
+            <a href="update.html" style="text-decoration: none;" onMouseOver="this.style.color='#007c82'" onMouseLeave="this.style.color = ''">
+            <img src="images/update.png" style="width:150px;height:150px;" alt="update" style="width:100%"> <br><br>
+            <h3>Update Data</h3>
+            <p>Modify the contents of the database</p></a>
+          </div>
+    
+          <div class="w3-quarter">
+            <a href="delete.html" style="text-decoration: none;" onMouseOver="this.style.color='#007c82'" onMouseLeave="this.style.color = ''">
+            <img src="images/delete.png" style="width:150px;height:150px;" alt="delete" style="width:100%"> <br><br>
+            <h3>Delete Data</h3>
+            <p>Remove any unwanted information from the database</p></a>
+          </div>
+    
+          <div class="w3-quarter">
+            <a href="retrieve.html" style="text-decoration: none;" onMouseOver="this.style.color='#007c82'" onMouseLeave="this.style.color = ''">
+            <img src="images/retrieve.png" style="width:150px;height:150px;" alt="retreive" style="width:100%"> <br><br>
+            <h3>Retrieve Data</h3>
+            <p>Take a glance at the database</p></a>
+          </div>
+        </div></div><br><br>
+
+
+
+    <!-- !FOOTER! -->
+    <div id="footer">
+        <br><br>
+        <p> SIV3009 Assignment 2 | Created by: &nbsp;&nbsp; U2004667 CHONG YOONG SIM  &nbsp;&nbsp; & &nbsp;&nbsp; U2004605 LAI HUI HUI<br></p>                                     
+        <br><br>                               
+        
+    </div>
+</body>
+
+
+</html>

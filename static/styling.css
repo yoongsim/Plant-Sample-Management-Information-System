@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* MENU */
+
+
+#header_div{
+    position: relative;     
+    background-color: rgba(225, 255, 247, 0.932);
+    display: flex;
+
+}
+
+#h1_header_div{
+    color: white;
+    font-size: 40px;
+    font-weight: 1000;
+    padding-left: 8%;
+    padding-top: 3%;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+#header_nav{
+    background-color: rgb(0,124,130);
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+#header_nav_ul{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 10px;
+    overflow:hidden;
+    font-size: 15px;
+}
+
+#header_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+#header_li{
+    float: left;
+    border-right: solid 1px rgb(255, 255, 255);
+}
+
+#header_li a:hover{
+    background-color:rgba(127, 179, 182, 0.989);
+}
+
+#feedback_button{
+    background-image: url('images/feedback.png');
+    background-size: 80px 25px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: rgb(0,124,130);
+    border: none;
+    float: right;
+    width: 100px;
+    height: 38px;
+
+}
+
+/* PAGE CONTENT */
+#content{
+    padding-left: 14%;
+    padding-right: 14%;
+    margin-top:60px;
+}
+
+
+/* FORM */
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+input {
+    display: inline-block;
+    width: 140px;
+}
+
+legend {
+    background-color: rgba(170, 231, 215, 0.932);
+    color: black;
+    padding: 5px 10px;
+  }
+
+
+#submit_button{
+    padding: 7px;
+    background-color: rgb(0,124,130);
+    border: 1px solid transparent;
+    color: white;
+}
+
+
+#reset_button{
+    padding: 7px;
+    background-color: rgb(0,124,130);
+    border: 1px solid transparent;
+    color: white;
+}
+
+
+/* FOOTER */
+#footer {
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 2px;
+    width: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: #f2f2f2;
+}
+

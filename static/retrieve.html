@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2_PSMIS</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="images/plant_logo.png">
+</head>
+
+<body>
+    <!-- !MENU! -->
+    <div id ="header_div">
+        <img src="images/plant_logo.png" alt="Logo" id="logo_image" style="height: 50px;">
+        <h1 id = "h1_header_div">Plant Sample Management Information System </h1>
+    </div>
+
+    <div id="header_nav">
+        <ul id="header_nav_ul">
+            <li id = "header_li" ><a href="main.html" >Home</a></li>
+            <li id = "header_li" ><a href="insert.html" >Insert Data</a></li>
+            <li id = "header_li"><a href="update.html" >Update Data</a></li>
+            <li id = "header_li"><a href="delete.html" >Delete Data</a></li>
+            <li id = "header_li"><a href="retrieve.html" >Retrieve Data</a></li>
+            <button id="feedback_button"></button>
+        </ul>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div id="content">
+    
+    <div style = 'text-align: center'>
+        <h3><b>Retrieve Data</b></h3>
+        <p>Please select a table from the database</p>
+        <br>
+
+    <form id= "retrieveForm" action="/test-cgi/siv3009/yoongsim/.assignment2/retrieve.cgi" method="post" style="background-color: rgba(225, 255, 247, 0.932);">
+        <fieldset><br>
+        <br><select name="table">
+            <option value="species">Species</option>
+            <option value="spDetails">Species Details</option>
+            <option value="samples">Samples</option>
+            <option value="samplesDistributions">Samples Distributions</option>
+            <option value="distributions">Distributions</option>
+          </select>
+          <br><br><input type="submit"><br><br>
+        </fieldset></form>
+      </div>
+    </div><br><br><br><br><br><br><br>
+
+
+    <!-- !FOOTER! -->
+    <div id="footer">
+        <br><br>
+        <p> SIV3009 Assignment 2 | Created by: &nbsp;&nbsp; U2004667 CHONG YOONG SIM  &nbsp;&nbsp; & &nbsp;&nbsp; U2004605 LAI HUI HUI<br></p>                                     
+        <br><br>                               
+        
+    </div>
+</body>
+
+<!-- !JAVA SCRIPT! -->
+<script>
+    function resetQuery() {
+        document.getElementById("insertForm").reset();
+    }
+
+    var submit_button = document.getElementById("submit_button");
+    submit_button.addEventListener("click", function(e) {
+        var required = document.querySelectorAll("input[required]");
+
+        required.forEach(function(element){
+            if(element.value.trim()==""){
+                element.style.backgroundColor = "#de2c38";
+            } else {
+                element.style.backgroundColor = "white";
+            }
+            
+        });
+    });
+</script>
+</html>
